@@ -5,8 +5,8 @@ metadata:
   name: guestbook-a-diff-namespace
   namespace: tenant-x-test
   # expected error: application 'guestbook-a-diff-namespace' in namespace 'tenant-x-test' is not permitted to use project 'tenant-a-dev'
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
+  # finalizers:
+  #   - resources-finalizer.argocd.argoproj.io
 spec:
   project: tenant-a-dev
   source:
