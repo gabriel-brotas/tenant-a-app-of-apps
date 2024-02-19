@@ -3,7 +3,8 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: guestbook-a-diff-namespace
-  namespace: tenant-b-dev
+  namespace: tenant-x-test
+  # expected error: application 'guestbook-a-diff-namespace' in namespace 'tenant-x-test' is not permitted to use project 'tenant-a-dev'
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
