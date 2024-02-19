@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: guestbook-a-healthy-2
+  name: guestbook-a-argo-ns
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -14,7 +14,7 @@ spec:
     path: guestbook
   destination:
     name: in-cluster
-    namespace: guestbook-a-healthy-2
+    namespace: guestbook-a-argo-ns
   syncPolicy:
     automated:
       prune: true
