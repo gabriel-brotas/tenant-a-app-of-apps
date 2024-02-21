@@ -12,7 +12,7 @@ spec:
     path: guestbook
   destination:
     name: in-cluster
-    namespace: guestbook-a-wrong-project
+    namespace: guestbook-b-wrong-project
   syncPolicy:
     automated:
       prune: true
