@@ -4,6 +4,8 @@ kind: Application
 metadata:
   name: guestbook-a-diff-namespace
   namespace: random-ns
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
   # expected error: application 'guestbook-a-diff-namespace' in namespace 'random-ns' is not permitted to use project 'tenant-a-dev'
 spec:
   project: tenant-a-dev

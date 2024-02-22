@@ -4,6 +4,8 @@ kind: Application
 metadata:
   name: guestbook-a-wrong-project
   namespace: tenant-b-dev
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
 spec:
   project: tenant-b-dev
   source:
