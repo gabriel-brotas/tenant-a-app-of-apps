@@ -3,7 +3,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: guestbook-a-wrong-project
-  namespace: tenant-b-dev
+  namespace: tenant-b-dev # namespace tenant-b-dev is not permitted in project 'tenant-a-dev'
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:

@@ -2,19 +2,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: guestbook-a-diff-namespace
-  namespace: random-ns # namespace random-ns is not permitted in project 'tenant-a-dev'
+  name: guestbook-a-wrong-project-2
+  namespace: tenant-a-dev # namespace tenant-b-dev is not permitted in project 'tenant-a-dev'
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: tenant-a-dev
+  project: tenant-b-dev
   source:
     repoURL: https://github.com/argoproj/argocd-example-apps.git
     targetRevision: HEAD
     path: guestbook
   destination:
     name: in-cluster
-    namespace: guestbook-a-diff-namespace
+    namespace: guestbook-b-wrong-project-2
   syncPolicy:
     automated:
       prune: true
