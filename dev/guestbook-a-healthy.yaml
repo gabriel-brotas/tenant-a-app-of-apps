@@ -13,7 +13,8 @@ spec:
     targetRevision: HEAD
     path: guestbook
   destination:
-    name: in-cluster
+    name: tenant-a-dev
+    # name: in-cluster
     namespace: guestbook-a-healthy
   syncPolicy:
     automated:
