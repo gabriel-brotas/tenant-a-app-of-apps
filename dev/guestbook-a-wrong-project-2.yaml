@@ -13,7 +13,7 @@ spec:
     targetRevision: HEAD
     path: guestbook
   destination:
-    name: in-cluster
+    name: tenant-a-dev
     namespace: guestbook-b-wrong-project-2
   syncPolicy:
     automated:

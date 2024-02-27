@@ -14,7 +14,6 @@ spec:
     path: guestbook
   destination:
     name: tenant-a-dev
-    # name: in-cluster
     namespace: guestbook-a-healthy
   syncPolicy:
     automated:

@@ -3,7 +3,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: guestbook-a-argo-ns
-  namespace: argocd # namespace argocd is not permitted in project 'tenant-a-dev'
+  namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -13,7 +13,7 @@ spec:
     targetRevision: HEAD
     path: guestbook
   destination:
-    name: in-cluster
+    name: tenant-a-dev
     namespace: guestbook-a-argo-ns
   syncPolicy:
     automated:
