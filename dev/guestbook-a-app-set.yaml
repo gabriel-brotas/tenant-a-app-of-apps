@@ -11,9 +11,6 @@ spec:
           - cluster: tenant-a-dev
             values:
               namespaceSuffix: "1"
-          - cluster: tenant-a-dev
-            values:
-              namespaceSuffix: "2"
   template:
     metadata:
       name: "guestbook-{{values.namespaceSuffix}}"
