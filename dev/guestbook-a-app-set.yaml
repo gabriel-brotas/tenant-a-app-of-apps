@@ -13,7 +13,7 @@ spec:
               namespaceSuffix: "1"
   template:
     metadata:
-      name: "guestbook-{{values.namespaceSuffix}}"
+      name: "guestbook-app-set-a-{{values.namespaceSuffix}}"
     spec:
       project: tenant-a-dev
       source:
