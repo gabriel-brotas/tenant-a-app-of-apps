@@ -14,7 +14,6 @@ spec:
   template:
     metadata:
       name: "guestbook-{{values.namespaceSuffix}}"
-      namespace: tenant-a-dev
     spec:
       project: tenant-a-dev
       source:
